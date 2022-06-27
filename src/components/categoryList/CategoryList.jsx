@@ -7,8 +7,8 @@ function CategoryList({ categories }) {
     <div className={styles.categoryList_container}>
       <div>
         <div>
-          {categories.map((data) => (
-            <CategoryItem key={data.type} data={data} />
+          {categories.map((category) => (
+            <CategoryItem key={category.type} category={category} />
           ))}
         </div>
       </div>

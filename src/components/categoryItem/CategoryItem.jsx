@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import SubCategoryList from "../subCategoryList/SubCategoryList";
 import styles from "./CategoryItem.module.css";
 
-function CategoryItem({ data }) {
+function CategoryItem({ category }) {
   const [showItems, setshowItems] = useState(false);
   const [total, setTotal] = useState(0.0);
   const onClickHandler = () => {
@@ -10,7 +11,7 @@ function CategoryItem({ data }) {
 
   useEffect(() => {
     let sum = 0;
-    data.items.forEach((item) => {
+    category.items.forEach((item) => {
       sum += item.price;
     });
     setTotal(sum);
@@ -22,28 +23,10 @@ function CategoryItem({ data }) {
         className={styles.categoryItem_container_heading}
         onClick={onClickHandler}
       >
-        <p>{data.type}</p>
+        <p>{category.type}</p>
         <p>{total}$</p>
       </div>
-      {showItems && (
-        <div className={styles.categoryItem_container_body}>
-          <ul className={styles.categoryItem_container_body_list}>
-            {data.items.map((item) => {
-              return (
-                <li key={item.type}>
-                  <div
-                    className={styles.categoryItem_container_body_list_items}
-                  >
-                    <p>{item.price}$</p>
-                    <p>{item.title}</p>
-                    <p>12 June</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
+      {showItems && <SubCategoryList items={category.items} />}
     </div>
   );
 }
