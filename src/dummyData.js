@@ -1,5 +1,5 @@
 let expenseList = [
-    {
+    {   id:1,
         date :"21 june 2022",
         categories :[
             {
@@ -28,6 +28,7 @@ let expenseList = [
         ]
     },
     {
+        id:2,
         date :"25 june 2022",
         categories :[
             {

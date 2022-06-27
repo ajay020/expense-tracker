@@ -2,13 +2,12 @@ import CategoryItem from "../categoryItem/CategoryItem";
 import styles from "./CategoryList.module.css";
 import expenseList from "./../../dummyData";
 
-function CategoryList({ item }) {
+function CategoryList({ categories }) {
   return (
     <div className={styles.categoryList_container}>
       <div>
-        <div>{item.date}</div>
         <div>
-          {item.categories.map((data) => (
+          {categories.map((data) => (
             <CategoryItem key={data.type} data={data} />
           ))}
         </div>

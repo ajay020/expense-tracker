@@ -1,12 +1,9 @@
-import CategoryList from "./components/categoryList/CategoryList";
-import expenseList from "./dummyData";
+import ExpenseOverview from "./components/expenseOverview/ExpenseOverview";
 
 function App() {
   return (
     <div>
-        {
-            expenseList.map(item => <CategoryList key={item.date} item = {item}/>)
-        }
+       <ExpenseOverview/>
     </div>
   );
 }
