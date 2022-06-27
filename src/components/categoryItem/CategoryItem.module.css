@@ -1,7 +1,7 @@
 .categoryItem_container{
     background-color: lightgray;
     padding: .5rem;
-    width: 50%;
+    /* width: 50%; */
 }
 .categoryItem_container_heading{
     display: flex;

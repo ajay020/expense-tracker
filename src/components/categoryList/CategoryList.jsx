@@ -1,6 +1,5 @@
 import CategoryItem from "../categoryItem/CategoryItem";
 import styles from "./CategoryList.module.css";
-import expenseList from "./../../dummyData";
 
 function CategoryList({ categories }) {
   return (
