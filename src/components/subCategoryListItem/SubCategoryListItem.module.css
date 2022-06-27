@@ -1,0 +1,9 @@
+.subcategory_list_items{
+    background-color: darkgray;
+    margin:   2px 0;
+}
+
+.subcategory_list_item{
+    display: flex;
+    justify-content: space-between;
+}
