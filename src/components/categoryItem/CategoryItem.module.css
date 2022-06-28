@@ -1,22 +1,21 @@
+
 .categoryItem_container{
-    background-color: lightgray;
-    padding: .5rem;
-    /* width: 50%; */
-}
-.categoryItem_container_heading{
     display: flex;
-    justify-content: space-between;
-    background-color: beige;
+    /* justify-content: space-around; */
+    align-items: center;
+    background-color: gray;
     padding: 2px 4px;
 }
-.categoryItem_container_body{
-    /* display: flex; */
-    /* justify-content: space-between; */
-    background-color: burlywood;
-}
-.categoryItem_container_body_list_items{
+.categoryItem_container_type {
     display: flex;
+    align-items: center;
+    /* background-color: antiquewhite; */
 }
-.categoryItem_container_body_list_items p{
-    margin: 2px 4px;
+.categoryItem_container_type p{
+    margin-left: 8px;
+}
+
+
+.categoryItem_container_total_text{
+    margin-left: auto;
 }

@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import SubCategoryList from "../subCategoryList/SubCategoryList";
 import styles from "./CategoryItem.module.css";
-
+import {
+  IoChevronUpOutline as UpArrow,
+  IoChevronDown as DownArrow,
+} from "react-icons/io5";
 function CategoryItem({ category }) {
   const [showItems, setshowItems] = useState(false);
   const [total, setTotal] = useState(0.0);
@@ -18,16 +21,16 @@ function CategoryItem({ category }) {
   }, []);
 
   return (
-    <div className={styles.categoryItem_container}>
-      <div
-        className={styles.categoryItem_container_heading}
-        onClick={onClickHandler}
-      >
-        <p>{category.type}</p>
-        <p>{total}$</p>
+    <>
+      <div className={styles.categoryItem_container} onClick={onClickHandler}>
+        <div className={styles.categoryItem_container_type}>
+          {showItems ? <UpArrow /> : <DownArrow />}
+          <p>{category.type}</p>
+        </div>
+        <p className={styles.categoryItem_container_total_text}>{total}$</p>
       </div>
       {showItems && <SubCategoryList items={category.items} />}
-    </div>
+    </>
   );
 }
 
