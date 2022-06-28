@@ -53,6 +53,20 @@ let expenseList = [
                 ]
             }
         ]
+    },
+    {
+        id:3,
+        date :"30 june 2022",
+        categories :[
+            {
+                type:"Pets",
+                items :[
+                    {title:"Food", price: 40},
+                    {title:"Rope", price: 140},
+                ]
+            },
+            
+        ]
     }
 ];
 

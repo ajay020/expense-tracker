@@ -3,3 +3,11 @@
     width: 50%;
     margin: auto;
 }
+
+.chart_container{
+    /* padding: 4px; */
+    /* width: 400px; */
+    /* height: 400px; */
+    background-color: yellowgreen;
+
+}
