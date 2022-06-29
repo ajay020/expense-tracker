@@ -1,0 +1,18 @@
+.sidebar_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    width: 250px;
+    border: 1px solid lightgray;
+}
+
+.sidebar_list li{
+    padding: 8px 2px;
+    background-color: white;
+    margin: 4px 0;
+    cursor: pointer;
+}
+.sidebar_list li:hover{
+    background-color: lightgray;
+}

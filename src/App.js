@@ -1,11 +1,10 @@
-import ExpensePieChart from "./components/expenseChart/ExpensePieChart";
-import ExpenseOverview from "./components/expenseOverview/ExpenseOverview";
+import HomePage from "./pages/HomePage";
+
 
 function App() {
   return (
     <div>
-       <ExpenseOverview/>
-       {/* <ExpensePieChart/> */}
+        <HomePage/>
     </div>
   );
 }

@@ -1,0 +1,6 @@
+.homepage_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: azure;
+}
