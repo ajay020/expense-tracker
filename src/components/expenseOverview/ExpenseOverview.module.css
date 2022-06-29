@@ -1,7 +1,8 @@
 .expenseOverview__container{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     width: 50%;
     margin: auto;
+    
 }
 
 .chart_container{

@@ -1,9 +1,22 @@
-.subcategory_list_items{
-    background-color: darkgray;
-    margin:   2px 0;
+.subcategory_list_item{
+    margin:  0;
+    padding: 0;
 }
 
-.subcategory_list_item{
+.subcategory_list_item_row{
     display: flex;
     justify-content: space-between;
+}
+.subcategory_list_item_row p{
+    margin-right: 4px;
+}
+.txt_price_title{
+    display: flex;
+}
+.txt_price_title p:first-child{
+    margin-right: 12px;
+    color: red;
+}
+.txt_price_title p:nth-child(2){
+    font-weight: bold;
 }

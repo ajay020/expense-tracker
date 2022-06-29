@@ -1,10 +1,15 @@
 
 .categoryItem_container{
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    background-color: gray;
+    /* background-color: gray; */
     padding: 2px 4px;
+    cursor: pointer;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+.categoryItem_container:hover{
+    background-color: lightgray;
 }
 .categoryItem_container_type {
     display: flex;

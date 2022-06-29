@@ -1,22 +1,7 @@
 .categoryItem_container{
-    background-color: lightgray;
-    padding: .5rem;
-    width: 50%;
+    background-color: white;
 }
-.categoryItem_container_heading{
-    display: flex;
-    justify-content: space-between;
-    background-color: beige;
-    padding: 2px 4px;
-}
-.categoryItem_container_body{
-    /* display: flex; */
-    /* justify-content: space-between; */
-    background-color: burlywood;
-}
-.categoryItem_container_body_list_items{
-    display: flex;
-}
-.categoryItem_container_body_list_items p{
-    margin: 2px 4px;
+.categoryItem_container_list{
+    /* background-color: orangered; */
+    margin: 0;
 }

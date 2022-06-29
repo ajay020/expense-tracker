@@ -1,5 +1,3 @@
 .categoryList_container{
-    /* margin: auto; */
-    /* width: 50%; */
-    background-color: green;
+    border: 1px solid lightgray;
 }

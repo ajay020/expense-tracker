@@ -4,13 +4,9 @@ import styles from "./CategoryList.module.css";
 function CategoryList({ categories }) {
   return (
     <div className={styles.categoryList_container}>
-      <div>
-        <div>
-          {categories.map((category) => (
-            <CategoryItem key={category.type} category={category} />
-          ))}
-        </div>
-      </div>
+      {categories.map((category) => (
+        <CategoryItem key={category.type} category={category} />
+      ))}
     </div>
   );
 }
