@@ -41,21 +41,19 @@ function ExpenseOverview() {
   }, [currentIndex]);
 
   return (
-    <div>
-      <div className={styles.expenseOverview__container}>
-        <Navigator
-          date={currentExpenseItem.date}
-          moveBack={moveBack}
-          moveForward={moveForward}
+    <div className={styles.expenseOverview__container}>
+      <Navigator
+        date={currentExpenseItem.date}
+        moveBack={moveBack}
+        moveForward={moveForward}
+      />
+      <div className={styles.chart_container}>
+        <ExpensePieChart
+          categoriesTypes={categoryTypes}
+          totalPrices={totalItemPriceList}
         />
-        <div className={styles.chart_container}>
-          <ExpensePieChart
-            categoriesTypes={categoryTypes}
-            totalPrices={totalItemPriceList}
-          />
-        </div>
-        <CategoryList categories={currentExpenseItem.categories} />
       </div>
+      <CategoryList categories={currentExpenseItem.categories} />
     </div>
   );
 }

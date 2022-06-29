@@ -1,0 +1,5 @@
+.chart_container{
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+}

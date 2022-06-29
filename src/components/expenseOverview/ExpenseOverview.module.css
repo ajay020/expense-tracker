@@ -2,13 +2,13 @@
     /* background-color: antiquewhite; */
     width: 50%;
     margin: auto;
-    
 }
 
 .chart_container{
-    /* padding: 4px; */
-    /* width: 400px; */
-    /* height: 400px; */
-    background-color: yellowgreen;
-
+    width: 100%;
+    /* background-color: burlywood; */
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    border: 1px solid lightgray;
 }
