@@ -1,7 +1,7 @@
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import styles from "./Navigator.module.css";
 
-function Navigator({ date, moveBack, moveForward }) {
+function Navigator({ date, moveBack, moveForward, toggleAddForm }) {
   return (
     <div className={styles.navigator__container}>
       <MdArrowBackIos
@@ -13,6 +13,7 @@ function Navigator({ date, moveBack, moveForward }) {
         onClick={moveForward}
         className={styles.navigator__container_forward_arrow}
       />
+      <button onClick={toggleAddForm}>Add</button>
     </div>
   );
 }

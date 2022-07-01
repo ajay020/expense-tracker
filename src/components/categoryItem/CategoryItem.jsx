@@ -15,10 +15,10 @@ function CategoryItem({ category }) {
   useEffect(() => {
     let sum = 0;
     category.items.forEach((item) => {
-      sum += item.price;
+      sum += parseFloat(item.price);
     });
     setTotal(sum);
-  }, []);
+  }, [category]);
 
   return (
     <>

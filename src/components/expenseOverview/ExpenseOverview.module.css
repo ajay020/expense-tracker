@@ -1,12 +1,14 @@
 .expenseOverview__container{
-    background-color: antiquewhite;
-    /* width: 50%; */
+    /* background-color: green; */
+    width: 50%;
     /* margin: auto; */
+    position: relative;
 }
 
 .chart_container{
     width: 100%;
-    /* background-color: burlywood; */
+    /* position: relative; */
+    background-color: burlywood;
     /* margin: auto; */
     display: flex;
     justify-content: center;

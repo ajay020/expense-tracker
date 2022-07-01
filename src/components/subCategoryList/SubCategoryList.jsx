@@ -5,8 +5,8 @@ function SubCategoryList({ items }) {
   return (
     <div className={styles.categoryItem_container}>
       <ul className={styles.categoryItem_container_list}>
-        {items.map((item) => (
-          <SubCategoryListItem key={item.price} item={item} />
+        {items.map((item, index) => (
+          <SubCategoryListItem key={index} item={item} />
         ))}
       </ul>
     </div>

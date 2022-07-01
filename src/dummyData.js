@@ -1,6 +1,6 @@
 let expenseList = [
     {   id:1,
-        date :"21 june 2022",
+        date :"2022-06-21",
         categories :[
             {
                 type:"food",
@@ -29,7 +29,7 @@ let expenseList = [
     },
     {
         id:2,
-        date :"25 june 2022",
+        date :"2022-06-25",
         categories :[
             {
                 type:"Transport",
@@ -56,7 +56,7 @@ let expenseList = [
     },
     {
         id:3,
-        date :"30 june 2022",
+        date :"2022-06-29",
         categories :[
             {
                 type:"Pets",
