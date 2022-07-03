@@ -2,7 +2,7 @@ import CategoryItem from "../categoryItem/CategoryItem";
 import styles from "./CategoryList.module.css";
 
 function CategoryList({ categories }) {
-  //   console.log("Categorylist render", categories);
+  console.log("Categorylist render");
   return (
     <div className={styles.categoryList_container}>
       {categories?.map((category) => (

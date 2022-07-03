@@ -1,13 +1,13 @@
 import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+const Sidebar = ({ filterListByMonth, filterListByDay }) => {
+  console.log("Sidebar render");
   return (
     <ul className={styles.sidebar_list}>
-      <li>Day</li>
+      <li onClick={filterListByDay}>Day</li>
       <li>Week</li>
-      <li>Month</li>
+      <li onClick={filterListByMonth}>Month</li>
       <li>Year</li>
-      <input type="date" />
     </ul>
   );
 };

@@ -27,9 +27,10 @@ let expenseList = [
             }
         ]
     },
+    /*
     {
         id:2,
-        date :"2022-06-25",
+        date :"2022-07-02",
         categories :[
             {
                 type:"Transport",
@@ -54,20 +55,54 @@ let expenseList = [
             }
         ]
     },
+    */
     {
         id:3,
-        date :"2022-06-29",
+        date :"2022-08-10",
         categories :[
             {
                 type:"Pets",
                 items :[
-                    {title:"Food", price: 40},
+                    {title:"Chicken", price: 40},
                     {title:"Rope", price: 140},
                 ]
             },
-            
+            {
+                type:"Clothe",
+                items :[
+                    {title:"Tshirt", price: 40},
+                    {title:"Pents", price: 140},
+                ]
+            },
         ]
-    }
+    },
+    {
+        id:4,
+        date :"2022-08-11",
+        categories :[
+            {
+                type:"Pets",
+                items :[
+                    {title:"Biscuits", price: 40},
+                    {title:"sleeping bed", price: 140},
+                ]
+            },
+            {
+                type:"Bills",
+                items :[
+                    {title:"Light", price: 40},
+                    {title:"Internet", price: 140},
+                ]
+            },
+            {
+                type:"Clothe",
+                items :[
+                    {title:"Formal shirt", price: 40},
+                    {title:"Towel", price: 140},
+                ]
+            },
+        ]
+    },
 ];
 
 export default expenseList;

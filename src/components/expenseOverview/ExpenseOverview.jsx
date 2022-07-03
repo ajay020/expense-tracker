@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import AddTransaction from "../../pages/AddTransaction";
 import ExpensePieChart from "../expenseChart/ExpensePieChart";
 import Navigator from "../navigator/Navigator";
-import expenseList from "./../../dummyData";
 import CategoryList from "./../categoryList/CategoryList";
 import styles from "./ExpenseOverview.module.css";
 
-function ExpenseOverview() {
+function ExpenseOverview({ transactions, x }) {
   console.log("Expenseover render");
+  const [transactionList, setTransactionList] = useState(transactions);
   const [displayAddForm, setDisplayAddForm] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [categoryTypes, setCategoryTypes] = useState([]);
   const [totalItemPriceList, setTotalItemPriceList] = useState([]);
-  const [transactionList, setTransactionList] = useState(expenseList);
 
   const toggleAddForm = () => {
     setDisplayAddForm((preState) => !preState);
@@ -33,6 +32,11 @@ function ExpenseOverview() {
   let currentExpenseItem = transactionList[currentIndex];
 
   useEffect(() => {
+    setCurrentIndex(0);
+    setTransactionList(transactions);
+  }, [transactions]);
+
+  useEffect(() => {
     currentExpenseItem = transactionList[currentIndex];
     let totalPriceList = [];
     let categoryTypeList = currentExpenseItem.categories.map((currItem) => {
@@ -47,7 +51,7 @@ function ExpenseOverview() {
     });
     setCategoryTypes(categoryTypeList);
     setTotalItemPriceList(totalPriceList);
-  }, [currentIndex, transactionList]);
+  }, [currentIndex, transactionList, transactions]);
 
   return (
     <div className={styles.expenseOverview__container}>
@@ -69,7 +73,7 @@ function ExpenseOverview() {
           totalPrices={totalItemPriceList}
         />
       </div>
-      <CategoryList categories={currentExpenseItem.categories} />
+      <CategoryList categories={currentExpenseItem?.categories} />
     </div>
   );
 }
