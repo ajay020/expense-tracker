@@ -1,5 +1,5 @@
 import Chart from "react-apexcharts";
-import styles from "./ExpensePieChart.module.css";
+// import styles from "./ExpensePieChart.module.css";
 
 function ExpensePieChart({ categoriesTypes, totalPrices }) {
   return (

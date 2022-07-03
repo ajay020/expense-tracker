@@ -1,13 +1,26 @@
 .navigator__container{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+    background-color: darkgray;
+}
+.navigator__container_arrows {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    background-color: darkslategray;
 }
 .navigator__container_back_arrow,.navigator__container_forward_arrow {
     cursor: pointer;
-    padding: 4px;
-    background-color: brown;
-    margin: 0 12px;
+    padding: 4px 12px;
+    background-color: black;
+    margin: 0 24px;
+    color: white;
+}
+
+.navigator__container button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 12px;
 }

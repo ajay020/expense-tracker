@@ -6,9 +6,9 @@
 }
 
 .chart_container{
-    width: 100%;
+    /* width: 100%; */
     /* position: relative; */
-    background-color: burlywood;
+    background-color: lightgray;
     /* margin: auto; */
     display: flex;
     justify-content: center;

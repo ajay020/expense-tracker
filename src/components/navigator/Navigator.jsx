@@ -19,15 +19,17 @@ function Navigator({ date, moveBack, moveForward, toggleAddForm }) {
 
   return (
     <div className={styles.navigator__container}>
-      <MdArrowBackIos
-        onClick={moveBack}
-        className={styles.navigator__container_back_arrow}
-      />
-      <p>{formattedDate}</p>
-      <MdArrowForwardIos
-        onClick={moveForward}
-        className={styles.navigator__container_forward_arrow}
-      />
+      <div className={styles.navigator__container_arrows}>
+        <MdArrowBackIos
+          onClick={moveBack}
+          className={styles.navigator__container_back_arrow}
+        />
+        <p>{formattedDate}</p>
+        <MdArrowForwardIos
+          onClick={moveForward}
+          className={styles.navigator__container_forward_arrow}
+        />
+      </div>
       <button onClick={toggleAddForm}>Add</button>
     </div>
   );
