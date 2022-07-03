@@ -1,6 +1,6 @@
 .expenseOverview__container{
-    background-color: green;
-    /* width: 50%; */
+    /* background-color: green; */
+    width: 50%;
     /* margin: auto; */
     position: relative;
 }
@@ -13,4 +13,10 @@
     display: flex;
     justify-content: center;
     border: 1px solid lightgray;
+}
+
+@media (max-width:600px) {
+    .expenseOverview__container{
+        width: 100%;
+    }
 }

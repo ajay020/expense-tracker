@@ -4,7 +4,6 @@
     justify-content: space-around;
     border-bottom: 1px solid gray;
     background-color: darkgray;
-    /* z-index: 200; */
 }
 .navigator__container_menu_icon{
     color: white;
@@ -37,10 +36,8 @@
     .navigator__container_menu_icon {
         display: block;
     }
-    .navigator__container{
-        background-color: blueviolet;
-    }
+    
     .navigator__container_back_arrow,.navigator__container_forward_arrow{
-        margin: 0 2px;
+        margin: 0 4px;
     }
 }
