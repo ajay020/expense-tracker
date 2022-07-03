@@ -4,6 +4,14 @@
     justify-content: space-around;
     border-bottom: 1px solid gray;
     background-color: darkgray;
+    /* z-index: 200; */
+}
+.navigator__container_menu_icon{
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: none;
+    cursor: pointer;
 }
 .navigator__container_arrows {
     display: flex;
@@ -23,4 +31,16 @@
     background-color: black;
     color: white;
     padding: 5px 12px;
+}
+
+@media (max-width: 600px) {
+    .navigator__container_menu_icon {
+        display: block;
+    }
+    .navigator__container{
+        background-color: blueviolet;
+    }
+    .navigator__container_back_arrow,.navigator__container_forward_arrow{
+        margin: 0 2px;
+    }
 }

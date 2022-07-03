@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Sidebar from "./../components/sidebar/Sidebar";
 import ExpenseOverview from "./../components/expenseOverview/ExpenseOverview";
 import styles from "./HomePage.module.css";
 import expenseList from "../dummyData";
+import { TransactionContext } from "../context/ContextProvider";
 
 function HomePage() {
   //   console.log("Homepage render");
   const [transactions, setTransactions] = useState(expenseList);
-
+  const { isDrawerOpen } = useContext(TransactionContext);
   const filterListByDay = () => {
     setTransactions(expenseList);
   };
@@ -89,11 +90,17 @@ function HomePage() {
 
   return (
     <div className={styles.homepage_container}>
-      <Sidebar
-        filterListByMonth={filterListByMonth}
-        filterListByDay={filterListByDay}
-        filterListByYear={filterListByYear}
-      />
+      <div
+        className={styles.homepage_container_sidebar}
+        style={{ left: isDrawerOpen ? "0px" : "-300px" }}
+      >
+        <Sidebar
+          filterListByMonth={filterListByMonth}
+          filterListByDay={filterListByDay}
+          filterListByYear={filterListByYear}
+        />
+      </div>
+
       <ExpenseOverview
         transactions={transactions}
         filterListByDay={filterListByDay}

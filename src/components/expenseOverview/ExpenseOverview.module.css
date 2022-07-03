@@ -1,6 +1,6 @@
 .expenseOverview__container{
-    /* background-color: green; */
-    width: 50%;
+    background-color: green;
+    /* width: 50%; */
     /* margin: auto; */
     position: relative;
 }

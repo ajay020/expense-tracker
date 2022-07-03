@@ -3,4 +3,20 @@
     align-items: flex-start;
     justify-content: space-evenly;
     background-color: azure;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .homepage_container{
+        display: block;
+    }
+    .homepage_container_sidebar{
+        position: absolute;
+        top: 0;
+        left: -300px;
+        z-index: 10;
+        background-color: darkgray;
+        height: 100vh;
+    }
+   
 }
