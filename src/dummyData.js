@@ -3,7 +3,7 @@ let expenseList = [
         date :"2022-06-21",
         categories :[
             {
-                type:"food",
+                type:"Food",
                 items :[
                     {title:"Milk", price: 10.00},
                     {title:"Fruits", price: 30.10},
@@ -11,7 +11,7 @@ let expenseList = [
                 ]
             },
             {
-                type:"Clothes",
+                type:"Clothe",
                 items :[
                     {title:"Shirt", price: 100.10},
                     {title:"Jeans", price: 200.20},
@@ -27,7 +27,6 @@ let expenseList = [
             }
         ]
     },
-    /*
     {
         id:2,
         date :"2022-07-02",
@@ -55,10 +54,10 @@ let expenseList = [
             }
         ]
     },
-    */
+    
     {
         id:3,
-        date :"2022-08-10",
+        date :"2021-08-10",
         categories :[
             {
                 type:"Pets",
