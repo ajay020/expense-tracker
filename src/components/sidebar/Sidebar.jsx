@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { BiArrowBack as BackArrow } from "react-icons/bi";
 import { TransactionContext } from "../../context/ContextProvider";
 import styles from "./Sidebar.module.css";
 
@@ -28,7 +29,9 @@ const Sidebar = ({ filterListByMonth, filterListByDay, filterListByYear }) => {
 
   return (
     <ul className={styles.sidebar_list}>
-      <li onClick={closeDrawer}>X</li>
+      <li onClick={closeDrawer} className={styles.sidebar_list_backBtn}>
+        <BackArrow className={styles.sidebar_list_back_icon} />
+      </li>
       <li onClick={filterByDay}>Day</li>
       {/* <li>Week</li> */}
       <li onClick={filterByMonth}>Month</li>
