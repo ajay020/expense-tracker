@@ -5,7 +5,7 @@ let expenseList = [
             {
                 type:"Food",
                 items :[
-                    {title:"Milk", price: 10.00},
+                    {title:"Milk", price: 100.00},
                     {title:"Fruits", price: 30.10},
                     {title:"Vegitables", price: 20.25}
                 ]
@@ -13,9 +13,9 @@ let expenseList = [
             {
                 type:"Clothe",
                 items :[
-                    {title:"Shirt", price: 100.10},
-                    {title:"Jeans", price: 200.20},
-                    {title:"Shoes", price: 800.00}
+                    {title:"Shirt", price: 50.10},
+                    {title:"Jeans", price: 100.20},
+                    {title:"Shoes", price: 80.00}
                 ]
             },
             {
@@ -62,8 +62,8 @@ let expenseList = [
             {
                 type:"Pets",
                 items :[
-                    {title:"Chicken", price: 40},
-                    {title:"Rope", price: 140},
+                    {title:"Chicken", price:10},
+                    {title:"Rope", price: 20},
                 ]
             },
             {

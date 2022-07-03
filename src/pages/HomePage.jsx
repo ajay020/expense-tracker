@@ -49,7 +49,7 @@ function HomePage() {
     });
 
     setTransactions(Object.values(yearlyTransactions));
-    // console.log(Object.values(yearlyTransactions));
+    console.log(Object.values(yearlyTransactions));
   };
 
   const filterListByMonth = () => {
