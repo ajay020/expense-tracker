@@ -22,7 +22,7 @@ const Sidebar = ({ filterListByMonth, filterListByDay, filterListByYear }) => {
   return (
     <ul className={styles.sidebar_list}>
       <li onClick={filterByDay}>Day</li>
-      <li>Week</li>
+      {/* <li>Week</li> */}
       <li onClick={filterByMonth}>Month</li>
       <li onClick={filterByYear}>Year</li>
     </ul>

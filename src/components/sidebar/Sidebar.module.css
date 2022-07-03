@@ -2,16 +2,24 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: lightblue;
+    /* background-color: darkgray; */
     width: 250px;
     border: 1px solid lightgray;
+
 }
 
 .sidebar_list li{
-    padding: 8px 2px;
+    padding: 12px 2px;
     background-color: white;
     margin: 4px 0;
     cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+.sidebar_list li:last-child{
+    margin: 0;
+    border-bottom: none;
+
 }
 .sidebar_list li:hover{
     background-color: lightgray;
