@@ -1,10 +1,15 @@
 import HomePage from "./pages/HomePage";
-
+import ContextProvider from "./context/ContextProvider";
 
 function App() {
+
+  
+
   return (
     <div>
-        <HomePage/>
+        <ContextProvider>
+            <HomePage/>
+        </ContextProvider>
     </div>
   );
 }
