@@ -27,7 +27,9 @@ function CategoryItem({ category }) {
           {showItems ? <UpArrow /> : <DownArrow />}
           <p>{category.type}</p>
         </div>
-        <p className={styles.categoryItem_container_total_text}>{total}$</p>
+        <p className={styles.categoryItem_container_total_text}>
+          {total}&#x20b9;
+        </p>
       </div>
       {showItems && <SubCategoryList items={category.items} />}
     </>
