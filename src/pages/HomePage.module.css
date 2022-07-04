@@ -1,23 +1,28 @@
 .homepage_container{
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     /* background-color: palevioletred; */
     position: relative;
+    margin-top: 12px;
+    gap: 12px;
 }
 
 
 @media (max-width: 600px) {
     .homepage_container{
         display: block;
+        margin-top: 0px;
     }
     .homepage_container_sidebar{
         position: absolute;
         top: 0;
         left: -300px;
         z-index: 10;
-        background-color: darkgray;
+        background-color: black;
         height: 100vh;
+        opacity: 0.9;
+        border-right: 1px solid darkgray;
     }
    
 }
