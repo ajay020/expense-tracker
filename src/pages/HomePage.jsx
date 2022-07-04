@@ -2,23 +2,23 @@ import { useState, useEffect, useContext } from "react";
 import Sidebar from "./../components/sidebar/Sidebar";
 import ExpenseOverview from "./../components/expenseOverview/ExpenseOverview";
 import styles from "./HomePage.module.css";
-import expenseList from "../dummyData";
 import { TransactionContext } from "../context/ContextProvider";
 
 function HomePage() {
-  //   console.log("Homepage render");
-  const [transactions, setTransactions] = useState(expenseList);
-  const { isDrawerOpen } = useContext(TransactionContext);
-  const filterListByDay = () => {
-    setTransactions(expenseList);
-  };
+  const { isDrawerOpen, transactionList } = useContext(TransactionContext);
+  const [transactions, setTransactions] = useState(transactionList);
+  console.log("Homepage render", transactions);
 
   useEffect(() => {
-    setTransactions(expenseList);
-  }, []);
+    setTransactions(transactionList);
+  }, [transactionList]);
+
+  const filterListByDay = () => {
+    setTransactions(transactionList);
+  };
 
   const filterListByYear = () => {
-    let jsonString = JSON.stringify(transactions);
+    let jsonString = JSON.stringify(transactionList);
     let tempList = JSON.parse(jsonString);
 
     let yearlyTransactions = {};
@@ -50,11 +50,11 @@ function HomePage() {
     });
 
     setTransactions(Object.values(yearlyTransactions));
-    console.log(Object.values(yearlyTransactions));
+    // console.log(Object.values(yearlyTransactions));
   };
 
   const filterListByMonth = () => {
-    let jsonString = JSON.stringify(transactions);
+    let jsonString = JSON.stringify(transactionList);
     let tempList = JSON.parse(jsonString);
 
     let monthlyTransactions = {};

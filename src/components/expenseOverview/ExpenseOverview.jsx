@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import AddTransaction from "../../pages/AddTransaction";
 import ExpensePieChart from "../expenseChart/ExpensePieChart";
 import Navigator from "../navigator/Navigator";
 import CategoryList from "./../categoryList/CategoryList";
 import styles from "./ExpenseOverview.module.css";
+import { TransactionContext } from "../../context/ContextProvider";
 
-function ExpenseOverview({ transactions, x }) {
-  console.log("Expenseover render");
-  const [transactionList, setTransactionList] = useState(transactions);
+function ExpenseOverview({ transactions }) {
+  console.log("Expenseover render", transactions);
+  //   const { transactions } = useContext(TransactionContext);
   const [displayAddForm, setDisplayAddForm] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [categoryTypes, setCategoryTypes] = useState([]);
@@ -24,20 +25,19 @@ function ExpenseOverview({ transactions, x }) {
   };
 
   const moveForward = () => {
-    if (currentIndex < transactionList.length - 1) {
+    if (currentIndex < transactions.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
-  let currentExpenseItem = transactionList[currentIndex];
+  let currentExpenseItem = transactions[currentIndex];
 
   useEffect(() => {
     setCurrentIndex(0);
-    setTransactionList(transactions);
   }, [transactions]);
 
   useEffect(() => {
-    currentExpenseItem = transactionList[currentIndex];
+    currentExpenseItem = transactions[currentIndex];
     let totalPriceList = [];
     let categoryTypeList = currentExpenseItem?.categories.map((currItem) => {
       let sum = 0;
@@ -51,13 +51,11 @@ function ExpenseOverview({ transactions, x }) {
     });
     setCategoryTypes(categoryTypeList);
     setTotalItemPriceList(totalPriceList);
-  }, [currentIndex, transactionList, transactions]);
+  }, [currentIndex, transactions]);
 
   return (
     <div className={styles.expenseOverview__container}>
       <AddTransaction
-        transactionList={transactionList}
-        setTransactionList={setTransactionList}
         displayAddForm={displayAddForm}
         setDisplayAddForm={setDisplayAddForm}
       />

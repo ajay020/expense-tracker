@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { TransactionContext } from "../context/ContextProvider";
 import styles from "./AddTransaction.module.css";
 
-const AddTransaction = ({
-  transactionList,
-  setTransactionList,
-  displayAddForm,
-  setDisplayAddForm,
-}) => {
+const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
   console.log("AddTransaction render");
   const [date, setDate] = useState("");
+  const { transactionList, setTransactionList } =
+    useContext(TransactionContext);
+
   const [amount, setAmount] = useState(0);
   const [note, setNote] = useState("");
   const [category, setCategory] = useState("Food");
@@ -63,7 +62,6 @@ const AddTransaction = ({
   return (
     <div
       className={styles.add_transaction_container}
-      //   onSubmit={addTransaction}
       style={{ display: displayAddForm ? "flex" : "none" }}
     >
       <input
