@@ -92,8 +92,10 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
         <option value="Clothe">Clothe</option>
         <option value="Bills">Bills</option>
       </select>
-      <button onClick={addTransaction}>Add</button>
-      <button onClick={() => setDisplayAddForm(false)}>Cancel</button>
+      <div className={styles.add_transaction_container_btns}>
+        <button onClick={addTransaction}>Add</button>
+        <button onClick={() => setDisplayAddForm(false)}>Cancel</button>
+      </div>
     </div>
   );
 };
