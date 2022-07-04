@@ -8,10 +8,10 @@ import styles from "./Navigator.module.css";
 function Navigator({ date, moveBack, moveForward, toggleAddForm }) {
   const { filterBy, setIsDrawerOpen } = useContext(TransactionContext);
 
-  let formattedDate = moment(date).format("DD");
+  let formattedDate = moment(date).format("ddd, DD MMMM");
 
   if (filterBy === "day") {
-    formattedDate = moment(date).format("DD MMMM");
+    formattedDate = moment(date).format("ddd, D MMMM");
   } else if (filterBy === "month") {
     formattedDate = moment(date).format("MMMM");
   } else if (filterBy === "year") {

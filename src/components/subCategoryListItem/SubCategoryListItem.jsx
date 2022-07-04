@@ -1,4 +1,5 @@
 import styles from "./SubCategoryListItem.module.css";
+import moment from "moment";
 
 function SubCategoryListItem({ item }) {
   return (
@@ -8,7 +9,7 @@ function SubCategoryListItem({ item }) {
           <p>{item.price}&#x20b9;</p>
           <p>{item.title}</p>
         </div>
-        <p>12 June</p>
+        <p>{moment(item.time).format("ddd, DD MMM")}</p>
       </div>
     </li>
   );

@@ -32,11 +32,15 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
         (cat) => cat.type === category
       );
       if (existCategory) {
-        existCategory.items.push({ title: note, price: amount });
+        existCategory.items.push({
+          title: note,
+          price: amount,
+          time: date,
+        });
       } else {
         newTransaction.categories.push({
           type: category,
-          items: [{ title: note, price: amount }],
+          items: [{ title: note, price: amount, time: date }],
         });
       }
       let filteredList = transactionList.filter(
@@ -51,7 +55,7 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
         categories: [
           {
             type: category,
-            items: [{ title: note, price: amount }],
+            items: [{ title: note, price: amount, time: date }],
           },
         ],
       };
