@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./AddTransaction.module.css";
-import expenseList from "./../dummyData";
 
 const AddTransaction = ({
   transactionList,

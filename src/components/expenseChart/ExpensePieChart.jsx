@@ -3,6 +3,14 @@ import Chart from "react-apexcharts";
 
 function ExpensePieChart({ categoriesTypes, totalPrices }) {
   let options = {
+    noData: {
+      text: "You have no records.",
+      align: "center",
+      verticalAlign: "middle",
+      offsetX: 0,
+      offsetY: 0,
+    },
+
     // responsive: [
     //   {
     //     breakpoint: 480,
@@ -16,6 +24,7 @@ function ExpensePieChart({ categoriesTypes, totalPrices }) {
     //     },
     //   },
     // ],
+
     colors: ["#c01104", "#900175", "#00177c", "#027d11", "#f94504"],
     fill: {
       colors: ["#c01104", "#900175", "#00177c", "#027d11", "#f94504"],
@@ -43,7 +52,7 @@ function ExpensePieChart({ categoriesTypes, totalPrices }) {
       },
     },
     // title: { text: "Expense chart", horizontalAlign: "right" },
-    labels: [...categoriesTypes],
+    labels: categoriesTypes || [],
     plotOptions: {
       pie: {
         startAngle: 0,
@@ -105,7 +114,12 @@ function ExpensePieChart({ categoriesTypes, totalPrices }) {
   };
   return (
     <div>
-      <Chart options={options} series={totalPrices} type="donut" width="380" />
+      <Chart
+        options={options}
+        series={totalPrices || []}
+        type="donut"
+        width="380"
+      />
     </div>
   );
 }

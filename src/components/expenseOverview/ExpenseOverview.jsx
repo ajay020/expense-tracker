@@ -39,7 +39,7 @@ function ExpenseOverview({ transactions, x }) {
   useEffect(() => {
     currentExpenseItem = transactionList[currentIndex];
     let totalPriceList = [];
-    let categoryTypeList = currentExpenseItem.categories.map((currItem) => {
+    let categoryTypeList = currentExpenseItem?.categories.map((currItem) => {
       let sum = 0;
       currItem.items.forEach((item) => {
         sum += parseFloat(item.price);
