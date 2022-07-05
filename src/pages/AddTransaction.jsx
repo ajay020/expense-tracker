@@ -91,14 +91,14 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       >
-        <option value="">Choose a Category</option>
+        <option value="">Select a Category</option>
         <option value="Food">Food</option>
         <option value="Car">Car</option>
         <option value="Clothe">Clothe</option>
         <option value="Bills">Bills</option>
-        <option value="Bills">Transport</option>
-        <option value="Bills">Health</option>
-        <option value="Bills">Eating-Out</option>
+        <option value="Transport">Transport</option>
+        <option value="Health">Health</option>
+        <option value="Eating-out">Eating-Out</option>
       </select>
       <div className={styles.add_transaction_container_btns}>
         <button onClick={addTransaction}>Add</button>

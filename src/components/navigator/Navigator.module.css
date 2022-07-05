@@ -29,6 +29,7 @@
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
     padding: 5px 12px;
 }
 
