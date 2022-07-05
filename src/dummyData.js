@@ -1,33 +1,31 @@
 let expenseList = [
-    // {   id:1,
-    //     date :"2022-06-21",
-    //     categories :[
-    //         {
-    //             type:"Food",
-    //             items :[
-    //                 {title:"Milk", price: 100.00},
-    //                 {title:"Fruits", price: 30.10},
-    //                 {title:"Vegitables", price: 20.25}
-    //             ]
-    //         },
-    //         {
-    //             type:"Clothe",
-    //             items :[
-    //                 {title:"Shirt", price: 50.10},
-    //                 {title:"Jeans", price: 100.20},
-    //                 {title:"Shoes", price: 80.00}
-    //             ]
-    //         },
-    //         {
-    //             type:"Entertainment",
-    //             items :[
-    //                 {title:"Netflix", price: 10},
-    //                 {title:"Movie", price: 400},
-    //             ]
-    //         }
-    //     ]
-    // },
-    /*
+    {   id:1,
+        date :"2022-06-21",
+        categories :[
+            {
+                type:"Food",
+                items :[
+                    {title:"Fruits", price: 30.10},
+                    {title:"Vegitables", price: 20.25}
+                ]
+            },
+            {
+                type:"Clothe",
+                items :[
+                    {title:"Shirt", price: 50.10},
+                    {title:"Shoes", price: 80.00}
+                ]
+            },
+            {
+                type:"Entertainment",
+                items :[
+                    {title:"Netflix", price: 800},
+                    {title:"Movie", price: 400},
+                ]
+            }
+        ]
+    },
+    
     {
         id:2,
         date :"2022-07-02",
@@ -55,6 +53,7 @@ let expenseList = [
             }
         ]
     },
+    /*
     
     {
         id:3,

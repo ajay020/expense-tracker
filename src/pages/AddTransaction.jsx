@@ -8,9 +8,9 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
   const { transactionList, setTransactionList } =
     useContext(TransactionContext);
 
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
-  const [category, setCategory] = useState("Food");
+  const [category, setCategory] = useState("");
 
   const addTransaction = () => {
     setDisplayAddForm(false);
@@ -70,19 +70,19 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
     >
       <input
         type="date"
-        placeholder="choose a date"
+        placeholder="Choose a date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
       <input
-        type="number"
-        placeholder="type amount"
+        type="text"
+        placeholder="Enter amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Note"
+        placeholder="Wrtie Note (optional)"
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
@@ -91,10 +91,14 @@ const AddTransaction = ({ displayAddForm, setDisplayAddForm }) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       >
+        <option value="">Choose a Category</option>
         <option value="Food">Food</option>
         <option value="Car">Car</option>
         <option value="Clothe">Clothe</option>
         <option value="Bills">Bills</option>
+        <option value="Bills">Transport</option>
+        <option value="Bills">Health</option>
+        <option value="Bills">Eating-Out</option>
       </select>
       <div className={styles.add_transaction_container_btns}>
         <button onClick={addTransaction}>Add</button>
